@@ -15,7 +15,7 @@ class DeviceSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Device
-        fields = ('name', 'ip_adress', 'description', 'features')
+        fields = ('id', 'name', 'ip_adress', 'description', 'features')
 
     def create(self, validated_data):
         if 'features' not in self.initial_data:
